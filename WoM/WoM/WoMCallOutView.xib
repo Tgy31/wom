@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PXd-uC-OBn" customClass="WoMCallOutView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ann-hA-qYU">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-jz-FLS">
+                            <rect key="frame" x="10" y="10" width="230" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIt-Hu-pjk">
+                            <rect key="frame" x="245" y="22" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="dDd-3V-YJE"/>
+                                <constraint firstAttribute="height" constant="35" id="m2N-R5-k4M"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="play.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="playButtonHandler:" destination="PXd-uC-OBn" eventType="touchUpInside" id="xIx-vj-70H"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-he-65r">
+                            <rect key="frame" x="10" y="53" width="230" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="109-RV-oJu"/>
+                        <constraint firstAttribute="bottom" secondItem="jHi-he-65r" secondAttribute="bottom" constant="10" id="GXg-6D-N25"/>
+                        <constraint firstItem="WGD-jz-FLS" firstAttribute="leading" secondItem="Ann-hA-qYU" secondAttribute="leading" constant="10" id="JGK-V1-EQM"/>
+                        <constraint firstAttribute="trailing" secondItem="WGD-jz-FLS" secondAttribute="trailing" constant="60" id="LnG-is-ugh"/>
+                        <constraint firstAttribute="centerY" secondItem="pIt-Hu-pjk" secondAttribute="centerY" id="MIa-Rb-jBC"/>
+                        <constraint firstAttribute="trailing" secondItem="pIt-Hu-pjk" secondAttribute="trailing" constant="20" id="Mzl-wa-rWX"/>
+                        <constraint firstItem="WGD-jz-FLS" firstAttribute="top" secondItem="Ann-hA-qYU" secondAttribute="top" constant="10" id="SkF-cs-x9P"/>
+                        <constraint firstAttribute="trailing" secondItem="jHi-he-65r" secondAttribute="trailing" constant="60" id="rBI-fV-zlr"/>
+                        <constraint firstItem="jHi-he-65r" firstAttribute="leading" secondItem="Ann-hA-qYU" secondAttribute="leading" constant="10" id="xFe-of-gIA"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4y-Ay-gJl">
+                    <rect key="frame" x="135" y="80" width="30" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Ajp-m3-x95"/>
+                        <constraint firstAttribute="height" constant="17" id="Xsl-mh-ooi"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ann-hA-qYU" firstAttribute="top" secondItem="PXd-uC-OBn" secondAttribute="top" id="2iV-K9-bxD"/>
+                <constraint firstItem="Ann-hA-qYU" firstAttribute="leading" secondItem="PXd-uC-OBn" secondAttribute="leading" id="ERZ-HV-iVL"/>
+                <constraint firstItem="h4y-Ay-gJl" firstAttribute="top" secondItem="Ann-hA-qYU" secondAttribute="bottom" id="H12-DZ-d6k"/>
+                <constraint firstAttribute="centerX" secondItem="h4y-Ay-gJl" secondAttribute="centerX" id="hpR-xD-b88"/>
+                <constraint firstAttribute="trailing" secondItem="Ann-hA-qYU" secondAttribute="trailing" id="vU4-sv-mxC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="jHi-he-65r" id="Lee-5h-zsm"/>
+                <outlet property="label" destination="WGD-jz-FLS" id="rjy-J9-aIe"/>
+                <outlet property="playButton" destination="pIt-Hu-pjk" id="w9S-DD-I8R"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_arrow.png" width="30" height="17"/>
+        <image name="play.png" width="500" height="500"/>
+    </resources>
+</document>

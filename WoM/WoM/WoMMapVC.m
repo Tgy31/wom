@@ -8,6 +8,8 @@
 
 #import "WoMMapVC.h"
 #import "WoMTotalManager.h"
+#import "WoMCallOutView.h"
+#import "WoMAnnotationView.h"
 
 #define LYON 45.764043, 4.835658999999964
 
@@ -89,14 +91,13 @@
     if ([annotation isKindOfClass:[MKPointAnnotation class]])
     {
         // Try to dequeue an existing pin view first.
-        MKAnnotationView *pinView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"totalAnnotation"];
+        WoMAnnotationView *pinView = (WoMAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"totalAnnotation"];
         if (!pinView)
         {
             // If an existing pin view was not available, create one.
-            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"totalAnnotation"];
-            pinView.canShowCallout = YES;
+            pinView = [[WoMAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"totalAnnotation"];
+            pinView.canShowCallout = NO;
             pinView.image = [UIImage imageNamed:@"total.png"];
-            pinView.calloutOffset = CGPointMake(0, 0);
         } else {
             pinView.annotation = annotation;
         }
@@ -105,6 +106,31 @@
     return nil;
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    self.center = [view.annotation coordinate];
+    
+    if(![view.annotation isKindOfClass:[MKAnnotationView class]]) {
+        WoMCallOutView *calloutView = [WoMCallOutView newView];
+        CGRect calloutViewFrame = calloutView.frame;
+        calloutViewFrame.origin = CGPointMake(-calloutViewFrame.size.width/2 + 10, -calloutViewFrame.size.height + 5);
+        calloutView.frame = calloutViewFrame;
+        calloutView.annotationView = view;
+        [calloutView.playButton addTarget:self action:@selector(playButtonHandler) forControlEvents:UIControlEventAllEvents];
+        [view addSubview:calloutView];
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+    for (UIView *subview in view.subviews ){
+        [subview removeFromSuperview];
+    }
+}
+
+- (void)playButtonHandler
+{
+    
+}
 
 #pragma mark - Total API
 

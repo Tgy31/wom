@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A4BC6E11958CA5B005D2A53 /* WoMTotalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BC6E01958CA5B005D2A53 /* WoMTotalManager.m */; };
 		5A4BC6E31958D788005D2A53 /* total.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6E21958D788005D2A53 /* total.png */; };
+		5A4BC6E61958D8DB005D2A53 /* WoMCallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BC6E51958D8DB005D2A53 /* WoMCallOutView.m */; };
+		5A4BC6E81958D8EB005D2A53 /* WoMCallOutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6E71958D8EB005D2A53 /* WoMCallOutView.xib */; };
+		5A4BC6ED1958DFA6005D2A53 /* down_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6EC1958DFA6005D2A53 /* down_arrow@2x.png */; };
+		5A4BC6F01958E400005D2A53 /* WoMAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BC6EF1958E400005D2A53 /* WoMAnnotationView.m */; };
+		5A4BC6F21958E4B2005D2A53 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6F11958E4B2005D2A53 /* play.png */; };
+		5A4BC6F41958E4B8005D2A53 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6F31958E4B8005D2A53 /* pause.png */; };
 		5A8FC5001958C160003D7698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC4FF1958C160003D7698 /* Foundation.framework */; };
 		5A8FC5021958C160003D7698 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC5011958C160003D7698 /* CoreGraphics.framework */; };
 		5A8FC5041958C160003D7698 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC5031958C160003D7698 /* UIKit.framework */; };
@@ -42,6 +48,14 @@
 		5A4BC6DF1958CA5B005D2A53 /* WoMTotalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoMTotalManager.h; sourceTree = "<group>"; };
 		5A4BC6E01958CA5B005D2A53 /* WoMTotalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoMTotalManager.m; sourceTree = "<group>"; };
 		5A4BC6E21958D788005D2A53 /* total.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = total.png; sourceTree = "<group>"; };
+		5A4BC6E41958D8DB005D2A53 /* WoMCallOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoMCallOutView.h; sourceTree = "<group>"; };
+		5A4BC6E51958D8DB005D2A53 /* WoMCallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoMCallOutView.m; sourceTree = "<group>"; };
+		5A4BC6E71958D8EB005D2A53 /* WoMCallOutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WoMCallOutView.xib; sourceTree = "<group>"; };
+		5A4BC6EC1958DFA6005D2A53 /* down_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_arrow@2x.png"; sourceTree = "<group>"; };
+		5A4BC6EE1958E400005D2A53 /* WoMAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoMAnnotationView.h; sourceTree = "<group>"; };
+		5A4BC6EF1958E400005D2A53 /* WoMAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoMAnnotationView.m; sourceTree = "<group>"; };
+		5A4BC6F11958E4B2005D2A53 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		5A4BC6F31958E4B8005D2A53 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		5A8FC4FC1958C160003D7698 /* WoM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8FC4FF1958C160003D7698 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A8FC5011958C160003D7698 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4BC6E91958D8F4005D2A53 /* CallOutView */ = {
+			isa = PBXGroup;
+			children = (
+				5A4BC6E41958D8DB005D2A53 /* WoMCallOutView.h */,
+				5A4BC6E51958D8DB005D2A53 /* WoMCallOutView.m */,
+				5A4BC6E71958D8EB005D2A53 /* WoMCallOutView.xib */,
+				5A4BC6EE1958E400005D2A53 /* WoMAnnotationView.h */,
+				5A4BC6EF1958E400005D2A53 /* WoMAnnotationView.m */,
+			);
+			name = CallOutView;
+			sourceTree = "<group>";
+		};
 		5A8FC4F31958C160003D7698 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +153,10 @@
 		5A8FC5051958C160003D7698 /* WoM */ = {
 			isa = PBXGroup;
 			children = (
+				5A4BC6F11958E4B2005D2A53 /* play.png */,
+				5A4BC6F31958E4B8005D2A53 /* pause.png */,
 				5A4BC6E21958D788005D2A53 /* total.png */,
+				5A4BC6EC1958DFA6005D2A53 /* down_arrow@2x.png */,
 				5A8FC50E1958C160003D7698 /* WoMAppDelegate.h */,
 				5A8FC50F1958C160003D7698 /* WoMAppDelegate.m */,
 				5A8FC5341958C186003D7698 /* WoM.storyboard */,
@@ -135,6 +164,7 @@
 				5A8FC5391958C382003D7698 /* WoMMapVC.m */,
 				5A4BC6DF1958CA5B005D2A53 /* WoMTotalManager.h */,
 				5A4BC6E01958CA5B005D2A53 /* WoMTotalManager.m */,
+				5A4BC6E91958D8F4005D2A53 /* CallOutView */,
 				5A8FC5171958C160003D7698 /* Images.xcassets */,
 				5A8FC5061958C160003D7698 /* Supporting Files */,
 			);
@@ -249,10 +279,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4BC6F21958E4B2005D2A53 /* play.png in Resources */,
 				5A4BC6E31958D788005D2A53 /* total.png in Resources */,
+				5A4BC6F41958E4B8005D2A53 /* pause.png in Resources */,
+				5A4BC6E81958D8EB005D2A53 /* WoMCallOutView.xib in Resources */,
 				5A8FC5351958C186003D7698 /* WoM.storyboard in Resources */,
 				5A8FC5181958C160003D7698 /* Images.xcassets in Resources */,
 				5A8FC50A1958C160003D7698 /* InfoPlist.strings in Resources */,
+				5A4BC6ED1958DFA6005D2A53 /* down_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A8FC53A1958C382003D7698 /* WoMMapVC.m in Sources */,
+				5A4BC6F01958E400005D2A53 /* WoMAnnotationView.m in Sources */,
 				5A8FC5101958C160003D7698 /* WoMAppDelegate.m in Sources */,
 				5A4BC6E11958CA5B005D2A53 /* WoMTotalManager.m in Sources */,
+				5A4BC6E61958D8DB005D2A53 /* WoMCallOutView.m in Sources */,
 				5A8FC50C1958C160003D7698 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
