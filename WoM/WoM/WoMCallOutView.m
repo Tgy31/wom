@@ -39,6 +39,7 @@
 
 - (void)setIsPlaying:(BOOL)isPlaying
 {
+    _isPlaying = isPlaying;
     NSString *imageName = isPlaying ? @"pause.png" : @"play.png";
     UIImage *image = [UIImage imageNamed:imageName];
     [self.playButton setImage:image forState:UIControlStateNormal];

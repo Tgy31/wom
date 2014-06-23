@@ -18,15 +18,17 @@
 #define TOTAL_API_RADIUS 100 //kilometers
 #define TOTAL_MAX_SHOP 50
 
-@interface WoMMapVC ()
+@interface WoMMapVC () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIToolbar *exploreButton;
 @property (weak, nonatomic) IBOutlet UIToolbar *routeButton;
 
 @property (nonatomic) CLLocationCoordinate2D center;
+@property (weak, nonatomic) IBOutlet UIToolbar *explorerView;
 
 @property (strong, nonatomic) NSArray *shopsInfo;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -36,7 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self registerTapRecognizer];
     
     self.mapView.delegate = self;
     
@@ -48,6 +51,22 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+- (void)registerTapRecognizer
+{
+    UITapGestureRecognizer *mapTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(mapTapHandler)];
+    [self.mapView addGestureRecognizer:mapTapGesture];
+}
+
+- (void)mapTapHandler
+{
+    [self.searchTextField resignFirstResponder];
+}
+
+- (IBAction)explorerButtonHandler:(id)sender
+{
+    self.explorerView.hidden = !self.explorerView.hidden;
 }
 
 #pragma mark - MapView
@@ -155,6 +174,24 @@
 - (void)totalHandlerFailure:(NSURLSessionDataTask *)task error:(NSError *)error
 {
     NSLog(@"%@", error);
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [UIView animateWithDuration:0.4 animations:^{
+        CGPoint center = self.explorerView.center;
+        self.explorerView.center = CGPointMake(center.x, center.y - 156);
+    }];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        CGPoint center = self.explorerView.center;
+        self.explorerView.center = CGPointMake(center.x, center.y + 156);
+    }];
 }
 
 @end

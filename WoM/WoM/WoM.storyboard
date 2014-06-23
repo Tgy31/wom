@@ -32,38 +32,71 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-fV-o4F">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="WD3-zZ-CII"/>
+                                    <constraint firstAttribute="height" constant="60" id="WD3-zZ-CII"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Explorer" id="M1h-PF-U5h"/>
+                                    <barButtonItem title="Explorer" id="M1h-PF-U5h">
+                                        <connections>
+                                            <action selector="explorerButtonHandler:" destination="k6n-QC-5ex" id="aVg-q4-NOz"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tj8-eK-W6v"/>
                                     <barButtonItem title="Itinéraire" id="dQu-H2-D40"/>
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tSN-QF-mwM">
-                                <rect key="frame" x="0.0" y="22" width="320" height="502"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="486"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-cU-NwE">
+                                <rect key="frame" x="0.0" y="464" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dIi-kw-4oL"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="random.png" id="wCp-I8-ZU0"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2oK-Dx-qfD"/>
+                                    <barButtonItem width="180" style="plain" id="rmo-U3-hIQ">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country, city, place..." minimumFontSize="17" id="kB2-sQ-L3a">
+                                            <rect key="frame" x="58" y="7" width="180" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="k6n-QC-5ex" id="HBb-0Q-Mt9"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZXP-3J-3Ce"/>
+                                    <barButtonItem title="Search" id="OGe-1g-7gk"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="s1W-fV-o4F" firstAttribute="top" secondItem="w3J-cU-NwE" secondAttribute="bottom" id="2Vf-Fo-tT2"/>
                             <constraint firstAttribute="trailing" secondItem="tSN-QF-mwM" secondAttribute="trailing" id="CyU-WT-xjj"/>
                             <constraint firstItem="tSN-QF-mwM" firstAttribute="leading" secondItem="Ubh-19-E3G" secondAttribute="leading" id="GPA-kn-pN9"/>
                             <constraint firstItem="tSN-QF-mwM" firstAttribute="top" secondItem="Ubh-19-E3G" secondAttribute="top" constant="22" id="LQL-b7-rXj"/>
                             <constraint firstItem="Qyk-c2-pXZ" firstAttribute="top" secondItem="s1W-fV-o4F" secondAttribute="bottom" id="LSF-5A-y2z"/>
+                            <constraint firstItem="w3J-cU-NwE" firstAttribute="leading" secondItem="Ubh-19-E3G" secondAttribute="leading" id="U3f-cC-gY8"/>
                             <constraint firstAttribute="trailing" secondItem="s1W-fV-o4F" secondAttribute="trailing" id="bx0-KO-JIv"/>
                             <constraint firstItem="s1W-fV-o4F" firstAttribute="leading" secondItem="Ubh-19-E3G" secondAttribute="leading" id="gzh-Ss-fEW"/>
+                            <constraint firstAttribute="trailing" secondItem="w3J-cU-NwE" secondAttribute="trailing" id="laH-hU-dbv"/>
                             <constraint firstItem="s1W-fV-o4F" firstAttribute="top" secondItem="tSN-QF-mwM" secondAttribute="bottom" id="pHu-rv-Sog"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ffv-2L-kha"/>
                     <connections>
                         <outlet property="exploreButton" destination="s1W-fV-o4F" id="Ylo-Xo-RDj"/>
+                        <outlet property="explorerView" destination="w3J-cU-NwE" id="S7m-F1-389"/>
                         <outlet property="mapView" destination="tSN-QF-mwM" id="fic-8u-fQe"/>
                         <outlet property="routeButton" destination="s1W-fV-o4F" id="B5s-EI-ozI"/>
+                        <outlet property="searchTextField" destination="kB2-sQ-L3a" id="zkd-Tv-XIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ek-wW-wN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,6 +104,9 @@
             <point key="canvasLocation" x="437" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="random.png" width="30" height="31"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

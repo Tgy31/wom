@@ -15,6 +15,7 @@
 		5A4BC6F01958E400005D2A53 /* WoMAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BC6EF1958E400005D2A53 /* WoMAnnotationView.m */; };
 		5A4BC6F21958E4B2005D2A53 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6F11958E4B2005D2A53 /* play.png */; };
 		5A4BC6F41958E4B8005D2A53 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6F31958E4B8005D2A53 /* pause.png */; };
+		5A4BC6F61958E858005D2A53 /* random.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BC6F51958E858005D2A53 /* random.png */; };
 		5A8FC5001958C160003D7698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC4FF1958C160003D7698 /* Foundation.framework */; };
 		5A8FC5021958C160003D7698 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC5011958C160003D7698 /* CoreGraphics.framework */; };
 		5A8FC5041958C160003D7698 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8FC5031958C160003D7698 /* UIKit.framework */; };
@@ -56,6 +57,7 @@
 		5A4BC6EF1958E400005D2A53 /* WoMAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoMAnnotationView.m; sourceTree = "<group>"; };
 		5A4BC6F11958E4B2005D2A53 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		5A4BC6F31958E4B8005D2A53 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		5A4BC6F51958E858005D2A53 /* random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = random.png; sourceTree = "<group>"; };
 		5A8FC4FC1958C160003D7698 /* WoM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8FC4FF1958C160003D7698 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A8FC5011958C160003D7698 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +158,7 @@
 				5A4BC6F11958E4B2005D2A53 /* play.png */,
 				5A4BC6F31958E4B8005D2A53 /* pause.png */,
 				5A4BC6E21958D788005D2A53 /* total.png */,
+				5A4BC6F51958E858005D2A53 /* random.png */,
 				5A4BC6EC1958DFA6005D2A53 /* down_arrow@2x.png */,
 				5A8FC50E1958C160003D7698 /* WoMAppDelegate.h */,
 				5A8FC50F1958C160003D7698 /* WoMAppDelegate.m */,
@@ -284,6 +287,7 @@
 				5A4BC6F41958E4B8005D2A53 /* pause.png in Resources */,
 				5A4BC6E81958D8EB005D2A53 /* WoMCallOutView.xib in Resources */,
 				5A8FC5351958C186003D7698 /* WoM.storyboard in Resources */,
+				5A4BC6F61958E858005D2A53 /* random.png in Resources */,
 				5A8FC5181958C160003D7698 /* Images.xcassets in Resources */,
 				5A8FC50A1958C160003D7698 /* InfoPlist.strings in Resources */,
 				5A4BC6ED1958DFA6005D2A53 /* down_arrow@2x.png in Resources */,
