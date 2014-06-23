@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rYM-6i-v3Q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zZx-vb-1iW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="rYM-6i-v3Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dSA-eF-xtc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k6n-QC-5ex" kind="relationship" relationship="rootViewController" id="79p-XB-sr0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23A-9b-Lrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="77"/>
+        </scene>
+        <!--WoM MapVC-->
+        <scene sceneID="pl6-Xu-ik6">
+            <objects>
+                <viewController restorationIdentifier="WoMMapVC" storyboardIdentifier="WoMMapVC" id="k6n-QC-5ex" customClass="WoMMapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vto-6l-eJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qyk-c2-pXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ubh-19-E3G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-fV-o4F">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WD3-zZ-CII"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Explorer" id="M1h-PF-U5h"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tj8-eK-W6v"/>
+                                    <barButtonItem title="Itinéraire" id="dQu-H2-D40"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tSN-QF-mwM">
+                                <rect key="frame" x="0.0" y="22" width="320" height="502"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tSN-QF-mwM" secondAttribute="trailing" id="CyU-WT-xjj"/>
+                            <constraint firstItem="tSN-QF-mwM" firstAttribute="leading" secondItem="Ubh-19-E3G" secondAttribute="leading" id="GPA-kn-pN9"/>
+                            <constraint firstItem="tSN-QF-mwM" firstAttribute="top" secondItem="Ubh-19-E3G" secondAttribute="top" constant="22" id="LQL-b7-rXj"/>
+                            <constraint firstItem="Qyk-c2-pXZ" firstAttribute="top" secondItem="s1W-fV-o4F" secondAttribute="bottom" id="LSF-5A-y2z"/>
+                            <constraint firstAttribute="trailing" secondItem="s1W-fV-o4F" secondAttribute="trailing" id="bx0-KO-JIv"/>
+                            <constraint firstItem="s1W-fV-o4F" firstAttribute="leading" secondItem="Ubh-19-E3G" secondAttribute="leading" id="gzh-Ss-fEW"/>
+                            <constraint firstItem="s1W-fV-o4F" firstAttribute="top" secondItem="tSN-QF-mwM" secondAttribute="bottom" id="pHu-rv-Sog"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ffv-2L-kha"/>
+                    <connections>
+                        <outlet property="exploreButton" destination="s1W-fV-o4F" id="Ylo-Xo-RDj"/>
+                        <outlet property="mapView" destination="tSN-QF-mwM" id="fic-8u-fQe"/>
+                        <outlet property="routeButton" destination="s1W-fV-o4F" id="B5s-EI-ozI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ek-wW-wN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="81"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
